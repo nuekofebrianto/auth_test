@@ -23,14 +23,16 @@ Instalasi:
 - ketikan
 	- docker-compose up -d --build (tunggu sampai selesai)
 	- docker-compose exec app composer update
-	- docker-compose exec app php artisan optimize
 	- docker-compose exec app php artisan key:generate
 	- docker-compose exec app php artisan jwt:secret
+	- docker-compose exec app php artisan optimize
 	- docker-compose exec app php artisan migrate
 
 Testing:
 - masih dalam command line ,ketikan
 	- docker-compose exec app vendor/bin/phpunit
+
+akses pada browser dengan url "localhost"
 
 ## Tanpa Docker
 
@@ -53,9 +55,9 @@ Instalasi:
 - dengan command line , masuk ke dalam projek path.
 - ketikan
 	- composer update
-	- php artisan optimize
 	- php artisan key:generate
 	- php artisan jwt:secret
+	- php artisan optimize
 	- buat db secara manual di mysql sesuai dengan DB_DATABASE pada file .env atau 
 		- php artisan create:db 
 	- php artisan migrate
@@ -63,7 +65,9 @@ Instalasi:
 Testing:
 - masih dalam command line ,ketikan
 	- vendor/bin/phpunit
+	- php artisan serve
 
+akses pada browser dengan url "localhost:8000"
 
 Cara Menggunakan:
 - buka postman

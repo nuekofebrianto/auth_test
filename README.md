@@ -14,18 +14,18 @@ Instalasi:
 
 - clone projek ini ke lokal kamu (git clone https://github.com/nuekofebrianto/auth_test.git).
 - setting .env file
-	- DB_DATABASE
-	- DB_USERNAME
-	- DB_PASSWORD
+	- DB_DATABASE=(custom)
+	- DB_USERNAME=(jangan root)
+	- DB_PASSWORD=(custom)
 
 - pastikan 'docker daemon' sudah berjalan.
 - dengan command line , masuk ke dalam projek path.
 - ketikan
 	- docker-compose up -d --build (tunggu sampai selesai)
 	- docker-compose exec app composer update
+	- docker-compose exec app php artisan optimize
 	- docker-compose exec app php artisan key:generate
 	- docker-compose exec app php artisan jwt:secret
-	- docker-compose exec app php artisan optimize
 	- docker-compose exec app php artisan migrate
 
 Testing:
@@ -45,17 +45,17 @@ Instalasi:
 
 - Clone projek ini ke lokal kamu (git clone https://github.com/nuekofebrianto/auth_test.git).
 - setting .env file
-	- DB_DATABASE
-	- DB_USERNAME
-	- DB_PASSWORD
+	- DB_DATABASE=(custom)
+	- DB_USERNAME=(sesuai lokal)
+	- DB_PASSWORD=(sesuai lokal)
 	- DB_HOST=127.0.0.1
 
 - dengan command line , masuk ke dalam projek path.
 - ketikan
 	- composer update
+	- php artisan optimize
 	- php artisan key:generate
 	- php artisan jwt:secret
-	- php artisan optimize
 	- buat db secara manual di mysql sesuai dengan DB_DATABASE pada file .env atau 
 		- php artisan create:db 
 	- php artisan migrate

@@ -3,6 +3,8 @@
 
 ## Auth Test
 
+## Menggunakan Docker
+
 Kebutuhan:
 
 - Docker(https://hub.docker.com).
@@ -10,8 +12,8 @@ Kebutuhan:
 
 Instalasi:
 
-- Clone projek ini ke lokal kamu (git clone https://gitlab.com/nuekofebrianto/auth_test.git).
-- rename file .env.example menjadi .env dan setting data berikut
+- clone projek ini ke lokal kamu (git clone https://github.com/nuekofebrianto/auth_test.git).
+- setting .env file
 	- DB_DATABASE
 	- DB_USERNAME
 	- DB_PASSWORD
@@ -23,12 +25,44 @@ Instalasi:
 	- docker-compose exec app composer update
 	- docker-compose exec app php artisan key:generate
 	- docker-compose exec app php artisan jwt:secret
-	- ketik y , enter
+	- docker-compose exec app php artisan optimize
 	- docker-compose exec app php artisan migrate
 
 Testing:
 - masih dalam command line ,ketikan
 	- docker-compose exec app vendor/bin/phpunit
+
+## Tanpa Docker
+
+Kebutuhan:
+
+- Php:8.0
+- Composer:2.3.5
+- Mysql:5.7
+- Postman(https://www.postman.com).
+
+Instalasi:
+
+- Clone projek ini ke lokal kamu (git clone https://github.com/nuekofebrianto/auth_test.git).
+- setting .env file
+	- DB_DATABASE
+	- DB_USERNAME
+	- DB_PASSWORD
+	- DB_HOST=127.0.0.1
+
+- dengan command line , masuk ke dalam projek path.
+- ketikan
+	- composer update
+	- php artisan key:generate
+	- php artisan jwt:secret
+	- php artisan optimize
+	- buat db secara manual di mysql sesuai dengan DB_DATABASE pada file .env atau 
+		- php artisan create:db 
+	- php artisan migrate
+
+Testing:
+- masih dalam command line ,ketikan
+	- vendor/bin/phpunit
 
 
 Cara Menggunakan:

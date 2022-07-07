@@ -50,8 +50,12 @@
         <br>
         <br>
         <br>
-        <a href="/tutor2">tutorial 2</a>
     </div>
+    <a href="/tutor2">tutorial 2</a>
+    <br>
+    <br>
+    <br>
+
 </body>
 
 </html>

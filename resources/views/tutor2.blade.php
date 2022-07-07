@@ -31,10 +31,13 @@
       <br>
       <br>
       <br>
-      <a href="/">tutorial 1</a>
-
+      
     </div>
-
+    
+    <a href="/">tutorial 1</a>
+    <br>
+    <br>
+    <br>
 </body>
 
 </html>

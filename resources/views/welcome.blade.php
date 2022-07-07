@@ -47,6 +47,10 @@
         <br>
         <br>
         kalo tidak muncul seperti itu , banyak2 berdoa saja okey !!
+        <br>
+        <br>
+        <br>
+        <a href="/tutor2">tutorial 2</a>
     </div>
 </body>
 

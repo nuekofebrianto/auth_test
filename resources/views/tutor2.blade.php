@@ -29,6 +29,10 @@
       <br>
       5. jalankan project nya
       <br>
+      <br>
+      <br>
+      <a href="/">tutorial 1</a>
+
     </div>
 
 </body>
